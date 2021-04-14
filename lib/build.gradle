@@ -1,6 +1,9 @@
 plugins {
     id 'java-library'
+    id 'war'
 }
+
+apply from: 'https://raw.github.com/gretty-gradle-plugin/gretty/master/pluginScripts/gretty.plugin'
 
 repositories {
     mavenCentral()
@@ -14,4 +17,9 @@ dependencies {
 
 tasks.named('test') {
     useJUnitPlatform()
+}
+
+gretty{
+    httpPort = 8080
+    contextPath = '/project1'
 }
