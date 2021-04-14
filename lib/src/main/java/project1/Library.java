@@ -19,7 +19,23 @@ public class Library extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
-        resp.getWriter().println("Hello, there!");
+        String name;
+        String age;
+        if((name = resp.getHeader("name")) != null){
+            resp.getWriter().println("Welcome, " + name);
+        }
+        else if((age = req.getParameter("age")) != null){
+            resp.getWriter().println("Wow, you're " + age + " years old?");
+        }
+        else{
+        resp.setContentType("application/json");
+        resp.getWriter().println("{'message':'Hello there!'}");
+        }
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
+        doGet(req, resp);
     }
         
 }
