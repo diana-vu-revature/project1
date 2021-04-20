@@ -2,22 +2,19 @@
 A Java 8 backend web API and ES6+ HTML/JS web interface with a PostgreSQL database. Submit a README.md with a proposal that matches as many requirements as manageable below. You may use the example proposal below for reference, or as your project itself.
 
 ### Tools & APIs
-- [] Agile User Stories
+- [x] User Stories
 - [x] Java SE 8
 - [x] Gradle
 - [x] JDBC
 - [x] PostgreSQL
-- [] JavaEE Servlet
-- [] HTML/JS/CSS
+- [x] JavaEE Servlet
+- [x] HTML/JS/CSS
 - [] AJAX/Fetch
 - [x] JUnit
 - [] log4j or similar
-- [] Jest or similar JS testing framework
+- [x] Jest or similar JS testing framework
 - [] Optional:
     - [] Docker, Docker-Compose
-    - [] React
-    - [] Bootstrap
-    - [] Remote hosting (AWS EC2/RDS)
     - [] Jenkins CI automation
     - [] Mockito
 
@@ -41,3 +38,27 @@ A Java 8 backend web API and ES6+ HTML/JS web interface with a PostgreSQL databa
 - [] Login - Authentication & Authorization
 - [] Database persistance
 - [] Session management
+
+### User stories
+- An Employee...
+    - [] can login
+    - [] can view the Employee Homepage
+    - [] can logout
+    - [] can submit a reimbursement request
+    - [] can upload an image of his/her receipt as part of the reimbursement request
+    - [] can view their pending reimbursement requests
+    - [] can view their resolved reimbursement requests
+    - [] can view their information
+    - [] can update their information
+    - [] receives an email when one of their reimbursement requests is resolved (optional)
+
+- A Manager...
+    - [] can login
+    - [] can view the Manager Homepage
+    - [] can logout
+    - [] can approve/deny pending reimbursement requests
+    - [] can view all pending requests from all employees
+    - [] can view images of the receipts from reimbursement requests
+    - [] can view all resolved requests from all employees and see which manager resolved it
+    - [] can view all Employees
+    - [] can view reimbursement requests from a single Employee 

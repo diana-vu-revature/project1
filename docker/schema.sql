@@ -1,3 +1,5 @@
 \c postgres
 
-create table Employees(id serial primary key, fname text not null, size text not null, cheese text not null, pepperoni text not null);
+create table employees(id serial primary key, fname text not null, surname text not null, email text not null, pword text not null, reimbursement int not null);
+
+insert into employees(fname, surname, email, reimbursement) values (John, Doe, johndoe@vu.net, p4ssw0rd, 0);

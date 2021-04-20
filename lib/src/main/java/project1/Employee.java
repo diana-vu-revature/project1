@@ -5,13 +5,15 @@ public class Employee {
     private String fname;
     private String surname;
     private String email;
+    private String pword;
     private double reimbursement;
 
-    public Employee(int id, String fname, String surname, String email, double reimbursement) {
+    public Employee(int id, String fname, String surname, String email, String pword, double reimbursement) {
         this.id = id;
         this.fname = fname;
         this.surname = surname;
         this.email = email;
+        this.pword = pword;
         this.reimbursement = reimbursement;
     }
 
@@ -45,6 +47,14 @@ public class Employee {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getPword() {
+        return pword;
+    }
+
+    public void setPword(String pword) {
+        this.pword = pword;
     }
 
     public double getReimbursement() {

@@ -1,32 +1,28 @@
 package project1;
 
-import java.util.ArrayList;
-import java.util.Scanner;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import java.sql.Statement;
-import java.sql.ResultSet;
 
 public class App {
+    int id;
+    double reimbursement;
+    String fname, surname, email;
     
     //for connecting to postgres
     String url = "jdbc:postgresql://localhost:5432/postgres";
     String username = "hiworld";
     String password = "password";
+    
+    public void main(){
 
     try {
         Connection connection = DriverManager.getConnection(url, username, password);
-
-        Employee bob = new Employee(id, fname, size, cheese, pepperoni);
-
-        EmployeeDao eDi = new EmployeeDao(connection, bob);
-
-        eDi.start();
 
     } catch (SQLException e) {
 
         e.printStackTrace();
     }
     
+}
 }

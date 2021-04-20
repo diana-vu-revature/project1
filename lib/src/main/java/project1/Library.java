@@ -5,6 +5,9 @@ package project1;
 
 import java.io.IOException;
 
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -16,6 +19,8 @@ public class Library extends HttpServlet {
     public boolean someLibraryMethod() {
         return true;
     }
+
+    private static final Logger log = LogManager.getLogger(Library.class);
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
@@ -31,11 +36,14 @@ public class Library extends HttpServlet {
         resp.setContentType("application/json");
         resp.getWriter().println("{'message':'Hello there!'}");
         }
+
+        log.debug("Get request received.");
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
         doGet(req, resp);
+        log.debug("post request received.");
     }
         
 }
