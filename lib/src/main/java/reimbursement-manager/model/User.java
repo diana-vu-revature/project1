@@ -1,20 +1,20 @@
-package project1;
+//package project1;
 
-public class Employee {
+public class User {
     private int id;
+    private int roleId;
     private String fname;
     private String surname;
     private String email;
     private String pword;
-    private double reimbursement;
 
-    public Employee(int id, String fname, String surname, String email, String pword, double reimbursement) {
+    public User(int id, int roleId, String fname, String surname, String email, String pword) {
         this.id = id;
+        this.roleId = roleId;
         this.fname = fname;
         this.surname = surname;
         this.email = email;
         this.pword = pword;
-        this.reimbursement = reimbursement;
     }
 
     public int getId() {
@@ -23,6 +23,14 @@ public class Employee {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public int getRoleId() {
+        return roleId;
+    }
+
+    public void setRoleId(int roleId) {
+        this.roleId = roleId;
     }
 
     public String getFname() {
@@ -55,14 +63,6 @@ public class Employee {
 
     public void setPword(String pword) {
         this.pword = pword;
-    }
-
-    public double getReimbursement() {
-        return reimbursement;
-    }
-
-    public void setReimbursement(double reimbursement) {
-        this.reimbursement = reimbursement;
     }
     
 }

@@ -1,4 +1,4 @@
-package project1;
+//package project1;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
