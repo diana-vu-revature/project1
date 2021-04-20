@@ -3,6 +3,8 @@ import java.io.IOException;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
+import reimbursementmanager.service.UserService;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -22,8 +24,19 @@ public class LoginController extends HttpServlet {
   }
 
   protected void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException{
+    String email = req.getParameter("email");
+    String password = req.getParameter("password");
+    int roleId = Integer.parseInt(req.getParameter("role"));
     
-    log.debug("Login post request received.");
+    
+    if(UserService.validLogin(email, password, roleId)) {
+      // TODO: set user session to userId and return view
+
+    } else {
+      // TODO: return login.html view with invalid message
+    }
+
+    log.debug("Login post request received for email: " + email);
   }
   
 }
