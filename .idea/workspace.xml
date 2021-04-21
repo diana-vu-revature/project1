@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="76847009-9355-4a0b-ace0-8a21dfe38794" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.settings/org.eclipse.buildship.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/.settings/org.eclipse.buildship.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/bin/main/reimbursementmanager/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/lib/bin/main/reimbursementmanager/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/bin/main/reimbursementmanager/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/lib/bin/main/reimbursementmanager/dao/UserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/bin/test/project1/LibraryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/lib/bin/test/project1/LibraryTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/reimbursementmanager/controller/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/reimbursementmanager/controller/Library.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/reimbursementmanager/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/reimbursementmanager/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/reimbursementmanager/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/reimbursementmanager/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/reimbursementmanager/model/Reimbursement.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/reimbursementmanager/model/Reimbursement.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1rSe8qfE9YArRgPm70g4Cq1wNiY" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="76847009-9355-4a0b-ace0-8a21dfe38794" name="Default Changelist" comment="" />
+      <created>1618973765551</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1618973765551</updated>
+    </task>
+    <servers />
+  </component>
+</project>
