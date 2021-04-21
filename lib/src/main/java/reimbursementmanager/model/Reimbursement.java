@@ -1,3 +1,5 @@
+package reimbursementmanager.model;
+
 public class Reimbursement {
   private int id;
   private String name;

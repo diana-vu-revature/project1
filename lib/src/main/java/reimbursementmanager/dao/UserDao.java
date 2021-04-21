@@ -5,8 +5,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.LogManager;
+// import org.apache.logging.log4j.Logger;
+// import org.apache.logging.log4j.LogManager;
+import org.apache.log4j.*;
 
 import reimbursementmanager.DBConnection;
 import reimbursementmanager.model.User;

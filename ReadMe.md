@@ -1,6 +1,12 @@
 # Project 1
 A Java 8 backend web API and ES6+ HTML/JS web interface with a PostgreSQL database.
 
+### Docker
+```bash
+docker-compose --file docker/compose.yaml up --build -d
+docker-compose --file docker/compose.yaml down
+```
+
 ### Tools & APIs
 - [x] User Stories
 - [x] Java SE 8
