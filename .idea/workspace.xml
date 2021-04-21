@@ -4,27 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="76847009-9355-4a0b-ace0-8a21dfe38794" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/bin/main/reimbursementmanager/controller/Library.class" beforeDir="false" afterPath="$PROJECT_DIR$/lib/bin/main/reimbursementmanager/controller/Library.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/bin/main/reimbursementmanager/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/lib/bin/main/reimbursementmanager/controller/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/bin/main/reimbursementmanager/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/lib/bin/main/reimbursementmanager/dao/UserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/bin/main/reimbursementmanager/model/Reimbursement.class" beforeDir="false" afterPath="$PROJECT_DIR$/lib/bin/main/reimbursementmanager/model/Reimbursement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/bin/main/reimbursementmanager/model/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/lib/bin/main/reimbursementmanager/model/Role.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/bin/test/project1/LibraryTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/lib/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/main/java/reimbursementmanager/controller/Library.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/reimbursementmanager/controller/Library.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/main/java/reimbursementmanager/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/reimbursementmanager/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/main/java/reimbursementmanager/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/reimbursementmanager/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/main/java/reimbursementmanager/model/Reimbursement.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/reimbursementmanager/model/Reimbursement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/main/java/reimbursementmanager/model/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/reimbursementmanager/model/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/src/test/java/project1/LibraryTest.java" beforeDir="false" />
-    </list>
-    <list id="be91df40-0a73-4db1-9956-92ad98d92f85" name="Changes by aprilnguyen" comment="">
-      <change beforePath="$PROJECT_DIR$/ReadMe.md" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMe.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/Dockerfile.dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/postgres.dockerfile" afterDir="false" />
-    </list>
+    <list default="true" id="76847009-9355-4a0b-ace0-8a21dfe38794" name="Default Changelist" comment="" />
+    <list id="be91df40-0a73-4db1-9956-92ad98d92f85" name="Changes by aprilnguyen" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

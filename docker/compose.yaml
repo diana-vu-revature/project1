@@ -4,13 +4,12 @@ services:
   db:
     build:
       context: .
-      dockerfile: ../docker/mysql.dockerfile
+      dockerfile: postgres.dockerfile
     image: db
     container_name: db
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_HOST: db
+      POSTGRES_PASSWORD: password
     ports:
       - 3306:3306
 
