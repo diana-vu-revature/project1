@@ -2,8 +2,12 @@
 A Java 8 backend web API and ES6+ HTML/JS web interface with a PostgreSQL database.
 
 ### Docker
+To Run:
 ```bash
 docker-compose --file docker/compose.yaml up --build -d
+```
+To Stop:
+```bash
 docker-compose --file docker/compose.yaml down
 ```
 
@@ -20,7 +24,7 @@ docker-compose --file docker/compose.yaml down
 - [x] log4j or similar
 - [x] Jest or similar JS testing framework
 - [] Optional:
-    - [] Docker, Docker-Compose
+    - [x] Docker, Docker-Compose
     - [] Jenkins CI automation
     - [] Mockito
 
@@ -39,11 +43,11 @@ docker-compose --file docker/compose.yaml down
 
 ### Functionality
 - [x] CRUD - Create, Read, Update, Delete
-- [] Web App dashboard interface
+- [x] Web App dashboard interface
 - [] Asynchronous interface updates
 - [x] Login - Authentication & Authorization
 - [x] Database persistance
-- [] Session management
+- [x] Session management
 
 ### User stories
 - An Employee...

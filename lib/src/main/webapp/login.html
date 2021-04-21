@@ -5,16 +5,18 @@
 <title>Log In</title>
 </head>
 <body>
+  <h1>Welcome</h1>
 	<form method="post" action="login">
 		<label for="email">Email:</label>
-    <input type="email" name="email" id="email"/> 
+    <input type="email" name="email" id="email"/> </br></br>
 
 		<label for="password">Password:</label>
-    <input type="password" name="pword" /> 
+    <input type="password" name="pword" /> </br></br>
     
-    <label for="role">Role:</label>
+    <label for="role">Manager:</label>
     <input type="radio" name="role" value="manager" /> 
-    <input type="radio" name="role" value="employee" />
+    <label for="role">Employee:</label>
+    <input type="radio" name="role" value="employee" /></br></br>
 		
     <input type="submit" value="Login">
 	</form>
