@@ -12,11 +12,11 @@ public class UserService {
 
   public static boolean validLogin(String email, String password, int roleId) {
     User user = userDao.getByEmailRole(email, roleId);
-    if(user.getPword().equals(password)) {
-      return true;
-    } else {
-      return false;
+    if(user != null) {
+      if(user.getPword().equals(password))
+        return true;
     }
+    return false;
   }
 
   public static int getUserId(String email, int roleId) {

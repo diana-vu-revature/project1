@@ -11,6 +11,12 @@ To Stop:
 docker-compose --file docker/compose.yaml down
 ```
 
+### To enter DB
+```bash
+docker exec -it db psql -U hiworld
+\c postgres
+```
+
 ### Tools & APIs
 - [x] User Stories
 - [x] Java SE 8

@@ -13,8 +13,7 @@ import reimbursementmanager.DBConnection;
 import reimbursementmanager.model.User;
 
 public class UserDao {
-  Connection connection;
-  User user;
+  private Connection connection;
 
   private static final Logger log = LogManager.getLogger(UserDao.class);
 
@@ -26,7 +25,7 @@ public class UserDao {
   public void add(User user) {
     try {
       PreparedStatement pStatement = connection
-        .prepareStatement("insert into users(role_id, fname, surname, email, pword) values (?, ?, ?, ?. ?)");
+        .prepareStatement("insert into person(role_id, fname, surname, email, pword) values (?, ?, ?, ?. ?)");
       pStatement.setInt(2, user.getRoleId());
       pStatement.setString(3, user.getFname());
       pStatement.setString(4, user.getSurname());
@@ -41,11 +40,12 @@ public class UserDao {
 
   // read
   public User getById(int id) {
+    User user = null;
     try{
-      PreparedStatement pStatement = connection.prepareStatement("select * from users where id=" + id);
+      PreparedStatement pStatement = connection.prepareStatement("select * from person where id=" + id);
       ResultSet set = pStatement.executeQuery();
       
-      User user = new User(
+      user = new User(
         set.getInt("id"),
         set.getInt("role_id"),
         set.getString("fname"),
@@ -63,12 +63,13 @@ public class UserDao {
   }
 
   public User getByEmailRole(String email, int role_id) {
+    User user = null;
     try{
       PreparedStatement pStatement = connection
-        .prepareStatement("select * from users where email='" + email + "' and role_id=" + role_id);
+        .prepareStatement("select * from person where email='" + email + "' and role_id=" + role_id);
       ResultSet set = pStatement.executeQuery();
       
-      User user = new User(
+      user = new User(
         set.getInt("id"),
         set.getInt("role_id"),
         set.getString("fname"),
@@ -83,11 +84,6 @@ public class UserDao {
     }
     
     return user;
-  }
-
-  public UserDao(Connection connection, User user) {
-    this.connection = connection;
-    this.user = user;
   }
 
 }
