@@ -8,6 +8,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
+import java.util.ArrayList;
 
 public class ReimbursementDao {
   private Connection connection;
@@ -56,7 +57,7 @@ public class ReimbursementDao {
   }
 
   public List<Reimbursement> getByEmployeeId(int id) {
-    List<Reimbursement> reimbursementList = null;
+    List<Reimbursement> reimbursementList = new ArrayList<Reimbursement>();
     try{
       PreparedStatement pStatement = connection.prepareStatement("select * from reimbursemnt where employee_id=" + id);
       ResultSet set = pStatement.executeQuery();
@@ -81,7 +82,7 @@ public class ReimbursementDao {
   }
 
   public List<Reimbursement> getByManagerId(int id) {
-    List<Reimbursement> reimbursementList = null;
+    List<Reimbursement> reimbursementList = new ArrayList<Reimbursement>();
     try{
       PreparedStatement pStatement = connection.prepareStatement("select * from reimbursemnt where manager_id=" + id);
       ResultSet set = pStatement.executeQuery();
@@ -106,7 +107,7 @@ public class ReimbursementDao {
   }
 
   public List<Reimbursement> getAll() {
-    List<Reimbursement> reimbursementList = null;
+    List<Reimbursement> reimbursementList = new ArrayList<Reimbursement>();
     try{
       PreparedStatement pStatement = connection.prepareStatement("select * from reimbursemnt");
       ResultSet set = pStatement.executeQuery();

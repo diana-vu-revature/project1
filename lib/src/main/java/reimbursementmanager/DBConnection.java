@@ -9,7 +9,7 @@ public class DBConnection {
 
   public DBConnection() {
     // for connecting to postgres
-    String url = "jdbc:postgresql://localhost:5432/postgres";
+    String url = "jdbc:postgresql://localhost:3306/postgres";
     String username = "hiworld";
     String password = "password";
 
