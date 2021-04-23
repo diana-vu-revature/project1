@@ -33,7 +33,7 @@ public class LoginController extends HttpServlet {
     String password = req.getParameter("password");
     String roleParam = req.getParameter("role");
 
-    System.out.println("email: " + email +"\nrole: " + roleParam + "\npassword: " + password);
+    // System.out.println("email: " + email +"\nrole: " + roleParam + "\npassword: " + password);
     int roleId = Integer.parseInt(roleParam);
 
     log.debug("Login post request received for email: " + email);

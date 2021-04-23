@@ -12,7 +12,7 @@ import org.apache.log4j.*;
 import reimbursementmanager.DBConnection;
 import reimbursementmanager.model.User;
 
-public class UserDao {
+public class UserDao{
   private Connection connection;
 
   private static final Logger log = LogManager.getLogger(UserDao.class);
@@ -45,16 +45,18 @@ public class UserDao {
       PreparedStatement pStatement = connection.prepareStatement("select * from person where id=" + id);
       ResultSet set = pStatement.executeQuery();
       
-      user = new User(
-        set.getInt("id"),
-        set.getInt("role_id"),
-        set.getString("fname"),
-        set.getString("surname"),
-        set.getString("email"),
-        set.getString("pword")
-      );
+      if(set.next() != false){
+        user = new User(
+          set.getInt("id"),
+          set.getInt("role_id"),
+          set.getString("fname"),
+          set.getString("surname"),
+          set.getString("email"),
+          set.getString("pword")
+        );
+        log.debug("Got user: " + user);
+      }
 
-      log.debug("Got user: " + user);
     } catch (SQLException e){
       e.printStackTrace();
     }

@@ -6,7 +6,7 @@ import reimbursementmanager.model.User;
 public class UserService {
   private static UserDao userDao = new UserDao();
 
-  public static User getById(int id) {
+  public User getById(int id) {
     return userDao.getById(id);
   }
 

@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8">
-<title>Log In</title>
-</head>
-<body>
-  <h1>Welcome</h1>
-	<form method="post" action="login">
-		<label for="email">Email:</label>
-    <input type="email" name="email" id="email"/> </br></br>
 
-		<label for="password">Password:</label>
+<head>
+  <meta charset="UTF-8">
+  <title>Log In</title>
+  <script src="js/login.js"></script>
+</head>
+
+<body onload="moveAlert()">
+  <h1>Welcome</h1>
+  <form method="post" action="login">
+    <label for="email">Email:</label>
+    <input type="email" name="email" id="email" /> </br></br>
+
+    <label for="password">Password:</label>
     <input type="password" name="password" /> </br></br>
-    
+
     <!-- TODO: dynamically create radio buttons with JS -->
     <label for="manager">Manager:</label>
-    <input type="radio" id="manager" name="role" value="2" /> 
+    <input type="radio" id="manager" name="role" value="2" />
     <label for="employee">Employee:</label>
     <input type="radio" id="employee" name="role" value="1" /></br></br>
-		
+
     <input type="submit" value="Login">
-	</form>
+  </form>
 </body>
+
 </html>

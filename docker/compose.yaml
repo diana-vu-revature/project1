@@ -9,7 +9,9 @@ services:
     container_name: db
     restart: always
     environment:
+      POSTGRES_USER: hiworld
       POSTGRES_PASSWORD: password
+      POSTGRES_HOST: db
     ports:
       - 3306:3306
 

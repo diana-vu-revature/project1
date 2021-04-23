@@ -4,6 +4,8 @@ import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.io.PrintWriter;
+
 import javax.servlet.annotation.WebFilter;
 
 @WebFilter({"/hello", "/employee/*", "/manager/*"})
@@ -18,8 +20,11 @@ public class LoggedInValidator implements Filter{
         chain.doFilter(request, response);
       }
     }
+    response.setContentType("text/html;charset=UTF-8");
+    PrintWriter out = response.getWriter();
+    out.print("<p id=\"alert\">Not Authorized. Please login!</p>");
 
-    request.getRequestDispatcher("login.html").forward(request, response);
+    request.getRequestDispatcher("login.html").include(request, response);
   }
   
 }
