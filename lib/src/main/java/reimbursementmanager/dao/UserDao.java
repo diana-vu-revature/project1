@@ -70,17 +70,19 @@ public class UserDao{
       PreparedStatement pStatement = connection
         .prepareStatement("select * from person where email='" + email + "' and role_id=" + role_id);
       ResultSet set = pStatement.executeQuery();
-      
-      user = new User(
-        set.getInt("id"),
-        set.getInt("role_id"),
-        set.getString("fname"),
-        set.getString("surname"),
-        set.getString("email"),
-        set.getString("pword")
-      );
 
-      log.debug("Got user: " + user);
+      if(set.next() != false){
+        user = new User(
+          set.getInt("id"),
+          set.getInt("role_id"),
+          set.getString("fname"),
+          set.getString("surname"),
+          set.getString("email"),
+          set.getString("pword")
+        );
+        log.debug("Got user: " + user);
+      }
+      
     } catch (SQLException e){
       e.printStackTrace();
     }

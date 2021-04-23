@@ -44,7 +44,7 @@ public class RoleDao {
 
       role = new Role(
         set.getInt("id"),
-        set.getString("name")
+        set.getString("role_name")
       );
   
       //log.debug("Got Role: " + role);

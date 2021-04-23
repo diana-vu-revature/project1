@@ -13,7 +13,7 @@ services:
       POSTGRES_PASSWORD: password
       POSTGRES_HOST: db
     ports:
-      - 3306:3306
+      - 5432:5432
 
   tomcat:
     depends_on:
