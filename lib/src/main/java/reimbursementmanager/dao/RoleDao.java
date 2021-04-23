@@ -13,6 +13,8 @@ import org.apache.log4j.*;
 public class RoleDao {
   private Connection connection;
 
+  private static final Logger log = LogManager.getLogger(RoleDao.class);
+
   public RoleDao() {
     connection = new DBConnection().getConnection();
   }
@@ -23,9 +25,11 @@ public class RoleDao {
       PreparedStatement pStatement = connection.prepareStatement("insert into user_role(role_name) values (?)");
       pStatement.setInt(2, role.getId());
       pStatement.setString(3, role.getName());
-      pStatement.executeUpdate();
+      int rowCount = pStatement.executeUpdate();
 
-       } catch (SQLException e) {
+      if(rowCount > 0)
+        log.debug("Added Role to database");
+    } catch (SQLException e) {
       // TODO Auto-generated catch block
       e.printStackTrace();
     }

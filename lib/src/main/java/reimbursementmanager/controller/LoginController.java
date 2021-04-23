@@ -51,29 +51,19 @@ public class LoginController extends HttpServlet {
         eView.forward(req, res);
 
       } else if(role.getName().equalsIgnoreCase("manager")) {
-        // TOD0: else if user is manager go to manager home view
+        // TODO: else if user is manager go to manager home view
         RequestDispatcher mView = req.getRequestDispatcher("mhomepage.html");
         mView.forward(req, res);
         
       }
-
-      /**
-      //not sure if this is better
-      res.setContentType("text/html"); 
-      PrintWriter out = res.getWriter(); 
-
-      // req.getParameter takes the value from login.html file where name is "email" 
-      String n = req.getParameter("email"); 
-      out.print("Welcome " + n); 
-      out.print("<a href='SecondServlet?uname=" + n + "'>visit</a>"); 
-      out.close();
-      **/
-
     } else {
-      // TODO: return login view with invalid login message
-      res.setContentType("text/html");
+      // return login view with invalid login message
+      res.setContentType("text/html;charset=UTF-8");
       PrintWriter out = res.getWriter();
-      out.print("Invalid login request. The email and password do not match any records in our system. Try again.");
+      out.print("<p id=\"alert\">Invalid login request. The email and password do not match any records in our system. Try again.</p>");
+
+      RequestDispatcher view = req.getRequestDispatcher("login.html");
+      view.include(req, res);
 
       log.debug("Invalid login for user: " + email);
     }
