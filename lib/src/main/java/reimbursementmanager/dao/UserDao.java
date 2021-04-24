@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 // import org.apache.logging.log4j.Logger;
 // import org.apache.logging.log4j.LogManager;
@@ -90,4 +92,28 @@ public class UserDao{
     return user;
   }
 
+  public List<User> getAllUsers(){
+    List<User> userList = new ArrayList<User>();
+    User user = null;
+    try{
+      PreparedStatement pStatement = connection.prepareStatement("select * from person");
+      ResultSet set = pStatement.executeQuery();
+      
+      while(set.next() != false) {
+        user = new User(
+          set.getInt("id"),
+          set.getInt("role_id"),
+          set.getString("fname"),
+          set.getString("surname"),
+          set.getString("email"),
+          set.getString("pword")
+        );
+        userList.add(user);
+        log.debug("Got users: " + user);
+      }
+    } catch (SQLException e){
+      e.printStackTrace();
+    }
+    return userList;
+  }
 }

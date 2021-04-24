@@ -18,7 +18,7 @@ public class ReimbursementDao {
   }
 
   //create
-  public void add(Reimbursement reimbursement) {
+  public Reimbursement add(Reimbursement reimbursement) {
     try {
       PreparedStatement pStatement = connection.prepareStatement("insert into reimbursement(employee_id, manager_id, price, approved, resolved) values (?, ?, ?, ?, ?)");
       pStatement.setInt(2, reimbursement.getEmployeeId());
@@ -31,6 +31,7 @@ public class ReimbursementDao {
       // TODO Auto-generated catch block
       e.printStackTrace();
     }
+    return reimbursement;
   }
   
   //read
@@ -40,7 +41,8 @@ public class ReimbursementDao {
       PreparedStatement pStatement = connection.prepareStatement("select * from reimbursemnt where id=" + id);
       ResultSet set = pStatement.executeQuery();
 
-      reimbursement = new Reimbursement(
+      if(set.next() != false) {
+        reimbursement = new Reimbursement(
         set.getInt("id"),
         set.getString("name"),
         set.getDouble("price"),
@@ -48,7 +50,9 @@ public class ReimbursementDao {
         set.getInt("manager_id"),
         set.getBoolean("approved"),
         set.getBoolean("resolved")
-      );
+        );
+      }
+      
     } catch (SQLException e){
       e.printStackTrace();
     }
@@ -63,7 +67,8 @@ public class ReimbursementDao {
       ResultSet set = pStatement.executeQuery();
 
       //TODO: loop for result set to get all reimbursements
-      Reimbursement reimbursement = new Reimbursement(
+      while(set.next() != false) {
+        Reimbursement reimbursement = new Reimbursement(
         set.getInt("id"),
         set.getString("name"),
         set.getDouble("price"),
@@ -71,8 +76,10 @@ public class ReimbursementDao {
         set.getInt("manager_id"),
         set.getBoolean("approved"),
         set.getBoolean("resolved")
-      );
-      reimbursementList.add(reimbursement);
+        );
+        reimbursementList.add(reimbursement);
+      }
+      
 
     } catch (SQLException e){
       e.printStackTrace();
@@ -88,7 +95,8 @@ public class ReimbursementDao {
       ResultSet set = pStatement.executeQuery();
 
       //TODO: loop for result set to get all reimbursements
-      Reimbursement reimbursement = new Reimbursement(
+      while(set.next() != false) {
+        Reimbursement reimbursement = new Reimbursement(
         set.getInt("id"),
         set.getString("name"),
         set.getDouble("price"),
@@ -96,8 +104,9 @@ public class ReimbursementDao {
         set.getInt("manager_id"),
         set.getBoolean("approved"),
         set.getBoolean("resolved")
-      );
-      reimbursementList.add(reimbursement);
+        );
+        reimbursementList.add(reimbursement);
+      }
 
     } catch (SQLException e){
       e.printStackTrace();
@@ -113,7 +122,8 @@ public class ReimbursementDao {
       ResultSet set = pStatement.executeQuery();
 
       //TODO: loop for result set to get all reimbursements
-      Reimbursement reimbursement = new Reimbursement(
+      while(set.next() != false) {
+        Reimbursement reimbursement = new Reimbursement(
         set.getInt("id"),
         set.getString("name"),
         set.getDouble("price"),
@@ -121,8 +131,9 @@ public class ReimbursementDao {
         set.getInt("manager_id"),
         set.getBoolean("approved"),
         set.getBoolean("resolved")
-      );
-      reimbursementList.add(reimbursement);
+        );
+        reimbursementList.add(reimbursement);
+      }
 
     } catch (SQLException e){
       e.printStackTrace();

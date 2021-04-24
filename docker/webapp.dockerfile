@@ -6,3 +6,4 @@ RUN gradle build
 FROM tomcat:jdk11-openjdk
 WORKDIR /usr/local/tomcat/webapps/
 COPY --from=gradle_build /app/build/libs/lib.war .
+RUN mv lib.war ROOT.war

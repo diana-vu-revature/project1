@@ -47,14 +47,14 @@ public class LoginController extends HttpServlet {
       Role role = RoleService.getById(roleId);
       if(role.getName().equalsIgnoreCase("employee")) {
         // TODO: if user is a employee go to employee home view
-        RequestDispatcher eView = req.getRequestDispatcher("ehomepage.html");
-        eView.forward(req, res);
-
+        // RequestDispatcher eView = req.getRequestDispatcher("employee.html");
+        // eView.forward(req, res);
+        res.sendRedirect(req.getContextPath() + "/employee");
       } else if(role.getName().equalsIgnoreCase("manager")) {
         // TODO: else if user is manager go to manager home view
-        RequestDispatcher mView = req.getRequestDispatcher("mhomepage.html");
-        mView.forward(req, res);
-        
+        // RequestDispatcher mView = req.getRequestDispatcher("manager.html");
+        // mView.forward(req, res);
+        res.sendRedirect(req.getContextPath() + "/manager");
       }
     } else {
       // return login view with invalid login message

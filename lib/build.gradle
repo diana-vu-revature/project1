@@ -1,23 +1,24 @@
 plugins {
-    id 'java-library'
-    id 'war'
+  id 'java-library'
+  id 'war'
 }
 
 repositories {
-    mavenCentral()
+  mavenCentral()
 }
 
 dependencies {
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.2'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
-    implementation 'javax.servlet:javax.servlet-api:4.0.1'
-    // implementation 'org.apache.logging.log4j:log4j:2.14.1'
-    implementation 'log4j:log4j:1.2.17'
-    implementation 'org.postgresql:postgresql:42.2.19.jre7'
+  testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.2'
+  testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+  implementation 'javax.servlet:javax.servlet-api:4.0.1'
+  // implementation 'org.apache.logging.log4j:log4j:2.14.1'
+  implementation 'log4j:log4j:1.2.17'
+  implementation 'org.postgresql:postgresql:42.2.19.jre7'
+  implementation 'com.google.code.gson:gson:2.8.6'
 }
 
 tasks.named('test') {
-    useJUnitPlatform()
+  useJUnitPlatform()
 }
 
 // gretty{

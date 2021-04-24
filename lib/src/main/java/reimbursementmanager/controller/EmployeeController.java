@@ -5,32 +5,32 @@ import java.io.PrintWriter;
 
 import org.apache.log4j.*;
 
-import javax.servlet.RequestDispatcher;
+import reimbursementmanager.model.User;
+import reimbursementmanager.service.UserService;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.servlet.annotation.WebServlet;
 
-@WebServlet("/logout")
-public class LogoutController extends HttpServlet {
+@WebServlet("/employee")
+public class EmployeeController extends HttpServlet {
   
   private static final Logger log = LogManager.getLogger(LoginController.class);
   
   protected void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException{
-    log.debug("Logout request received.");
-    // clear session
-    req.getSession().invalidate();
+    HttpSession session = req.getSession(false);
+    int userId = (int) session.getAttribute("userId");
 
-    // return login view with logout message
+    User user = UserService.getById(userId);
+
     res.setContentType("text/html;charset=UTF-8");
     PrintWriter out = res.getWriter();
-    out.print("<p id=\"logoutAlert\">You've been logged out.</p>");
+    out.print("<p id=\"hello\">Hello, "+ user.getFname() + " " + user.getSurname() + "</p>");
 
-    RequestDispatcher view = req.getRequestDispatcher("login.html");
-    view.include(req, res);
-
-    //log.debug("Logout for user: " + email);
+    req.getRequestDispatcher("employee.html").include(req, res);
   }
   
 }

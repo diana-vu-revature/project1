@@ -31,3 +31,16 @@ values (
   (select id from user_role where role_name = 'employee'), 
   'John', 'Doe', 'johndoe@vu.net', 'p4ssw0rd'
 );
+
+insert into person (role_id, fname, surname, email, pword) 
+values (
+  (select id from user_role where role_name = 'manager'), 
+  'Jane', 'Dawn', 'janedawn@vu.net', 'hello'
+);
+
+insert into reimbursement (manager_id, employee_id, price, resolved, approved)
+values (
+  (select id from person where email = 'janedawn@vu.net'),
+  (select id from person where email = 'johndoe@vu.net'),
+  500, false, false
+);

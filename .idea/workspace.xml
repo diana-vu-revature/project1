@@ -5,7 +5,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="76847009-9355-4a0b-ace0-8a21dfe38794" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/com_google_code_gson_gson_2_8_6.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ReadMe.md" beforeDir="false" afterPath="$PROJECT_DIR$/ReadMe.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/docker/schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker/webapp.dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/docker/webapp.dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/bin/main/reimbursementmanager/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/lib/bin/main/reimbursementmanager/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/bin/main/reimbursementmanager/controller/LogoutController.class" beforeDir="false" afterPath="$PROJECT_DIR$/lib/bin/main/reimbursementmanager/controller/LogoutController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/bin/main/reimbursementmanager/dao/ReimbursementDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/lib/bin/main/reimbursementmanager/dao/ReimbursementDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/bin/main/reimbursementmanager/dao/RoleDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/lib/bin/main/reimbursementmanager/dao/RoleDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/bin/main/reimbursementmanager/dao/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/lib/bin/main/reimbursementmanager/dao/UserDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/bin/main/reimbursementmanager/service/LoggedInValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/lib/bin/main/reimbursementmanager/service/LoggedInValidator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/bin/main/reimbursementmanager/service/RoleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/lib/bin/main/reimbursementmanager/service/RoleService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/bin/main/reimbursementmanager/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/lib/bin/main/reimbursementmanager/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/lib/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/reimbursementmanager/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/reimbursementmanager/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/reimbursementmanager/controller/LogoutController.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/reimbursementmanager/controller/LogoutController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/reimbursementmanager/dao/ReimbursementDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/reimbursementmanager/dao/ReimbursementDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/reimbursementmanager/dao/RoleDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/reimbursementmanager/dao/RoleDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/reimbursementmanager/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/reimbursementmanager/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/reimbursementmanager/service/LoggedInValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/reimbursementmanager/service/LoggedInValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/reimbursementmanager/service/RoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/reimbursementmanager/service/RoleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/java/reimbursementmanager/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/java/reimbursementmanager/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/webapp/ehomepage.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/webapp/js/ehomepage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/webapp/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/webapp/js/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/webapp/js/mhomepage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/webapp/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/main/webapp/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/main/webapp/mhomepage.html" beforeDir="false" />
     </list>
     <list id="be91df40-0a73-4db1-9956-92ad98d92f85" name="Changes by aprilnguyen" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,11 +62,13 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../reimbursement" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="codeWithMe.voiceChat.enabledByDefault" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="com.poratu.idea.plugins.tomcat.setting.TomcatSettingConfigurable" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Other File Types" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="com.poratu.idea.plugins.tomcat" factoryName="SMART_TOMCAT_FACTORY">

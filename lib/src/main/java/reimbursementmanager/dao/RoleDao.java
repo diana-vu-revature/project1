@@ -39,15 +39,18 @@ public class RoleDao {
   public Role getById(int id) {
     Role role = null;
     try{
-      PreparedStatement pStatement = connection.prepareStatement("select * from user_role where role=" + id);
+      PreparedStatement pStatement = connection.prepareStatement("select * from user_role where id=" + id);
       ResultSet set = pStatement.executeQuery();
-
-      role = new Role(
-        set.getInt("id"),
-        set.getString("role_name")
-      );
-  
-      //log.debug("Got Role: " + role);
+      
+      if(set.next() != false) {
+          role = new Role(
+          set.getInt("id"),
+          set.getString("role_name")
+        );
+    
+        log.debug("Got Role: " + role);
+      }
+      
       } catch (SQLException e){
         e.printStackTrace();
       }

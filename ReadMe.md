@@ -25,11 +25,11 @@ docker exec -it db psql -U hiworld
 - [x] PostgreSQL
 - [x] JavaEE Servlet
 - [x] HTML/JS/CSS
-- [] AJAX/Fetch
+- [x] AJAX/Fetch
 - [x] JUnit
 - [x] log4j or similar
 - [x] Jest or similar JS testing framework
-- [] Optional:
+- Optional:
     - [x] Docker, Docker-Compose
     - [] Jenkins CI automation
     - [] Mockito
@@ -38,9 +38,9 @@ docker exec -it db psql -U hiworld
 - [] Anemic/DDD OR n-tier package & class structure
 - [] Design Patterns:
   - [] Dependency Injection
-  - [] Data Access Object
+  - [x] Data Access Object
   - [] Business Delegate
-  - [] Model-View-Controller
+  - [x] Model-View-Controller
   - [] Front Controller
 - [] SQL Normalization (3rd form)
 - [] PL/pgSQL
@@ -57,9 +57,9 @@ docker exec -it db psql -U hiworld
 
 ### User stories
 - An Employee...
-    - [] can login
-    - [] can view the Employee Homepage
-    - [] can logout
+    - [x] can login
+    - [x] can view the Employee Homepage
+    - [x] can logout
     - [] can submit a reimbursement request
     - [] can upload an image of his/her receipt as part of the reimbursement request
     - [] can view their pending reimbursement requests
@@ -69,9 +69,9 @@ docker exec -it db psql -U hiworld
     - [] receives an email when one of their reimbursement requests is resolved (optional)
 
 - A Manager...
-    - [] can login
-    - [] can view the Manager Homepage
-    - [] can logout
+    - [x] can login
+    - [x] can view the Manager Homepage
+    - [x] can logout
     - [] can approve/deny pending reimbursement requests
     - [] can view all pending requests from all employees
     - [] can view images of the receipts from reimbursement requests
