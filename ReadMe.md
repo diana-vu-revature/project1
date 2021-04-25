@@ -60,7 +60,7 @@ docker exec -it db psql -U hiworld
     - [x] can login
     - [x] can view the Employee Homepage
     - [x] can logout
-    - [] can submit a reimbursement request
+    - [x] can submit a reimbursement request
     - [] can upload an image of his/her receipt as part of the reimbursement request
     - [x] can view their pending reimbursement requests
     - [x] can view their resolved reimbursement requests
@@ -74,7 +74,8 @@ docker exec -it db psql -U hiworld
     - [] can approve/deny pending reimbursement requests
     - [x] can view all pending requests from all employees
     - [] can view images of the receipts from reimbursement requests
-    - [x] can view all resolved requests from all employees and see which manager resolved it
+    - [x] can view all resolved requests from all employees
+        - []see which manager resolved it
     - [] can view all Employees
     - [] can view reimbursement requests from a single Employee 
     - [x] can view their information

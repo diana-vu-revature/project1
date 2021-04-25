@@ -76,6 +76,11 @@ public class ReimbursementController extends HttpServlet {
 
   protected void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException{
     // TODO: get parameters, set to Reimbursement object, add to db
+    // Get current user
+    HttpSession session = req.getSession(false);
+    int userId = (int) session.getAttribute("userId");
+    User user = UserService.getById(userId);
+
     String id = req.getParameter("id");
     String name = req.getParameter("name");
     String price = req.getParameter("price");
@@ -89,20 +94,27 @@ public class ReimbursementController extends HttpServlet {
       reimbursementId = Integer.parseInt(id);
     }
 
-    boolean isApproved = Boolean.parseBoolean(approved);
-    boolean isResolved = Boolean.parseBoolean(resolved);
+    Boolean isApproved = Boolean.parseBoolean(approved);
+    Boolean isResolved = Boolean.parseBoolean(resolved);
     double money = Double.parseDouble(price);
-    int eId = Integer.parseInt(employeeId);
-    int mId = Integer.parseInt(managerId);
+
+    Integer eId = null;
+    if(employeeId != null) {
+      eId = Integer.parseInt(employeeId);
+    } else {
+      eId = user.getId();
+    }
+
+    Integer mId = null;
+    if(managerId != null) {
+      mId = Integer.parseInt(managerId);
+    }
     
     Reimbursement reim = new Reimbursement(reimbursementId, name, money, eId, mId, isApproved, isResolved);
 
     ReimbursementService.add(reim);
 
     // redirect back to employee or manager homepage
-    HttpSession session = req.getSession(false);
-    int userId = (int) session.getAttribute("userId");
-    User user = UserService.getById(userId);
     Role r = RoleService.getById(user.getRoleId());
     if(r.getName().equalsIgnoreCase("manager")) {
       res.sendRedirect(req.getContextPath() + "/manager");

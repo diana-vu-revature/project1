@@ -5,11 +5,11 @@ public class Reimbursement {
   private String name;
   private double price;
   private int employeeId;
-  private int managerId;
-  private boolean approved;
-  private boolean resolved;
+  private Integer managerId;
+  private Boolean approved;
+  private Boolean resolved;
 
-  public Reimbursement(int id, String name, double price, int employeeId, int managerId, boolean approved, boolean resolved) {
+  public Reimbursement(int id, String name, double price, int employeeId, Integer managerId, Boolean approved, Boolean resolved) {
     this.id = id;
     this.name = name;
     this.price = price;
@@ -19,19 +19,19 @@ public class Reimbursement {
     this.resolved = resolved;
   }
 
-  public boolean isApproved() {
+  public Boolean isApproved() {
     return approved;
   }
 
-  public void setApprove(boolean approved) {
+  public void setApprove(Boolean approved) {
     this.approved = approved;
   }
 
-  public boolean isResolved() {
+  public Boolean isResolved() {
     return resolved;
   }
 
-  public void setResolved(boolean resolved) {
+  public void setResolved(Boolean resolved) {
     this.resolved = resolved;
   }
 
@@ -67,11 +67,11 @@ public class Reimbursement {
     this.employeeId = employeeId;
   }
 
-  public int getManagerId() {
+  public Integer getManagerId() {
     return managerId;
   }
 
-  public void setManagerId(int managerId) {
+  public void setManagerId(Integer managerId) {
     this.managerId = managerId;
   }
 

@@ -20,9 +20,9 @@ create table person (
 create table reimbursement(
   id int generated always as identity primary key,
   reim_name varchar(255) not null,
-  manager_id int not null references person(id),
+  manager_id int references person(id),
   employee_id int not null references person(id),
-  price money,
+  price double precision not null,
   resolved boolean default false not null,
   approved boolean
 );
@@ -44,5 +44,5 @@ values (
   'business trip',
   (select id from person where email = 'janedawn@vu.net'),
   (select id from person where email = 'johndoe@vu.net'),
-  500, false, false
+  500, true, true
 );

@@ -23,7 +23,11 @@ public class ReimbursementDao {
       PreparedStatement pStatement = connection.prepareStatement("insert into reimbursement(reim_name, employee_id, manager_id, price, approved, resolved) values (?, ?, ?, ?, ?, ?)");
       pStatement.setString(1, reimbursement.getName());
       pStatement.setInt(2, reimbursement.getEmployeeId());
-      pStatement.setInt(3, reimbursement.getManagerId());
+      if(reimbursement.getManagerId() != null) {
+        pStatement.setInt(3, reimbursement.getManagerId());
+      } else {
+        pStatement.setNull(3, java.sql.Types.INTEGER);
+      }
       pStatement.setDouble(4, reimbursement.getPrice());
       pStatement.setBoolean(5, reimbursement.isApproved());
       pStatement.setBoolean(6, reimbursement.isResolved());
