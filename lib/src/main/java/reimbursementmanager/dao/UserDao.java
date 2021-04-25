@@ -27,15 +27,34 @@ public class UserDao{
   public void add(User user) {
     try {
       PreparedStatement pStatement = connection
-        .prepareStatement("insert into person(role_id, fname, surname, email, pword) values (?, ?, ?, ?. ?)");
-      pStatement.setInt(2, user.getRoleId());
-      pStatement.setString(3, user.getFname());
-      pStatement.setString(4, user.getSurname());
-      pStatement.setString(5, user.getEmail());
-      pStatement.setString(6, user.getPword());
+        .prepareStatement("insert into person(role_id, fname, surname, email, pword) values (?, ?, ?, ?, ?)");
+      pStatement.setInt(1, user.getRoleId());
+      pStatement.setString(2, user.getFname());
+      pStatement.setString(3, user.getSurname());
+      pStatement.setString(4, user.getEmail());
+      pStatement.setString(5, user.getPword());
       pStatement.executeUpdate();
     } catch (SQLException e) {
   
+      e.printStackTrace();
+    }
+  }
+
+  // update
+  public void update(User user) {
+    // UPDATE table_name SET column1 = value1, column2 = value2...., columnN = valueN WHERE id=;
+    try{
+      PreparedStatement pStatement = connection
+        .prepareStatement("UPDATE person SET role_id=?, fname=?, surname=?, email=?, pword=? WHERE id=?");
+      pStatement.setInt(1, user.getRoleId());
+      pStatement.setString(2, user.getFname());
+      pStatement.setString(3, user.getSurname());
+      pStatement.setString(4, user.getEmail());
+      pStatement.setString(5, user.getPword());
+      pStatement.setInt(6, user.getId());
+      pStatement.executeUpdate();
+
+    } catch (SQLException e){
       e.printStackTrace();
     }
   }

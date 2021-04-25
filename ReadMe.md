@@ -42,10 +42,10 @@ docker exec -it db psql -U hiworld
   - [] Business Delegate
   - [x] Model-View-Controller
   - [] Front Controller
-- [] SQL Normalization (3rd form)
+- [x] SQL Normalization (3rd form)
 - [] PL/pgSQL
 - [] Optional:
-  - [] Single Page Application
+  - [x] Single Page Application
 
 ### Functionality
 - [x] CRUD - Create, Read, Update, Delete
@@ -62,19 +62,20 @@ docker exec -it db psql -U hiworld
     - [x] can logout
     - [] can submit a reimbursement request
     - [] can upload an image of his/her receipt as part of the reimbursement request
-    - [] can view their pending reimbursement requests
-    - [] can view their resolved reimbursement requests
-    - [] can view their information
-    - [] can update their information
-    - [] receives an email when one of their reimbursement requests is resolved (optional)
+    - [x] can view their pending reimbursement requests
+    - [x] can view their resolved reimbursement requests
+    - [x] can view their information
+    - [x] can update their information
 
 - A Manager...
     - [x] can login
     - [x] can view the Manager Homepage
     - [x] can logout
     - [] can approve/deny pending reimbursement requests
-    - [] can view all pending requests from all employees
+    - [x] can view all pending requests from all employees
     - [] can view images of the receipts from reimbursement requests
-    - [] can view all resolved requests from all employees and see which manager resolved it
+    - [x] can view all resolved requests from all employees and see which manager resolved it
     - [] can view all Employees
     - [] can view reimbursement requests from a single Employee 
+    - [x] can view their information
+    - [x] can update their information

@@ -20,12 +20,13 @@ public class ReimbursementDao {
   //create
   public Reimbursement add(Reimbursement reimbursement) {
     try {
-      PreparedStatement pStatement = connection.prepareStatement("insert into reimbursement(employee_id, manager_id, price, approved, resolved) values (?, ?, ?, ?, ?)");
+      PreparedStatement pStatement = connection.prepareStatement("insert into reimbursement(reim_name, employee_id, manager_id, price, approved, resolved) values (?, ?, ?, ?, ?, ?)");
+      pStatement.setString(1, reimbursement.getName());
       pStatement.setInt(2, reimbursement.getEmployeeId());
       pStatement.setInt(3, reimbursement.getManagerId());
       pStatement.setDouble(4, reimbursement.getPrice());
       pStatement.setBoolean(5, reimbursement.isApproved());
-      pStatement.setBoolean(4, reimbursement.isResolved());
+      pStatement.setBoolean(6, reimbursement.isResolved());
       pStatement.executeUpdate();
     } catch (SQLException e) {
       // TODO Auto-generated catch block
@@ -38,13 +39,13 @@ public class ReimbursementDao {
   public Reimbursement getById(int id) {
     Reimbursement reimbursement = null;
     try{
-      PreparedStatement pStatement = connection.prepareStatement("select * from reimbursemnt where id=" + id);
+      PreparedStatement pStatement = connection.prepareStatement("select * from reimbursement where id=" + id);
       ResultSet set = pStatement.executeQuery();
 
       if(set.next() != false) {
         reimbursement = new Reimbursement(
         set.getInt("id"),
-        set.getString("name"),
+        set.getString("reim_name"),
         set.getDouble("price"),
         set.getInt("employee_id"),
         set.getInt("manager_id"),
@@ -63,14 +64,14 @@ public class ReimbursementDao {
   public List<Reimbursement> getByEmployeeId(int id) {
     List<Reimbursement> reimbursementList = new ArrayList<Reimbursement>();
     try{
-      PreparedStatement pStatement = connection.prepareStatement("select * from reimbursemnt where employee_id=" + id);
+      PreparedStatement pStatement = connection.prepareStatement("select * from reimbursement where employee_id=" + id);
       ResultSet set = pStatement.executeQuery();
 
       //TODO: loop for result set to get all reimbursements
       while(set.next() != false) {
         Reimbursement reimbursement = new Reimbursement(
         set.getInt("id"),
-        set.getString("name"),
+        set.getString("reim_name"),
         set.getDouble("price"),
         set.getInt("employee_id"),
         set.getInt("manager_id"),
@@ -91,14 +92,14 @@ public class ReimbursementDao {
   public List<Reimbursement> getByManagerId(int id) {
     List<Reimbursement> reimbursementList = new ArrayList<Reimbursement>();
     try{
-      PreparedStatement pStatement = connection.prepareStatement("select * from reimbursemnt where manager_id=" + id);
+      PreparedStatement pStatement = connection.prepareStatement("select * from reimbursement where manager_id=" + id);
       ResultSet set = pStatement.executeQuery();
 
       //TODO: loop for result set to get all reimbursements
       while(set.next() != false) {
         Reimbursement reimbursement = new Reimbursement(
         set.getInt("id"),
-        set.getString("name"),
+        set.getString("reim_name"),
         set.getDouble("price"),
         set.getInt("employee_id"),
         set.getInt("manager_id"),
@@ -118,14 +119,14 @@ public class ReimbursementDao {
   public List<Reimbursement> getAll() {
     List<Reimbursement> reimbursementList = new ArrayList<Reimbursement>();
     try{
-      PreparedStatement pStatement = connection.prepareStatement("select * from reimbursemnt");
+      PreparedStatement pStatement = connection.prepareStatement("select * from reimbursement");
       ResultSet set = pStatement.executeQuery();
 
       //TODO: loop for result set to get all reimbursements
       while(set.next() != false) {
         Reimbursement reimbursement = new Reimbursement(
         set.getInt("id"),
-        set.getString("name"),
+        set.getString("reim_name"),
         set.getDouble("price"),
         set.getInt("employee_id"),
         set.getInt("manager_id"),

@@ -11,14 +11,29 @@
   <div id="welcome">
     <h1>Welcome to the Manager Homepage</h1>
   </div>
+
   <a href="logout">Logout</a>
 
-  <h2>Reimbursements</h2>
-  <p>
-    Review, deny, approve, check status of reimbursement requests from employees.
-  </p>
+  <div id="profileDiv">
+    <button type="button" id="profileButton">View/Update Profile</button>
+  </div>
 
-  <a href="update">Update Profile</a>
+  <div id="reimbursementDiv">
+    <h2>Reimbursement Statuses</h2>
+    <p>Review, deny, approve, check status of reimbursement requests from employees.</p>
+
+    <table id="reimTable">
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Manager</th>
+        <th>Employee</th>
+        <th>Resolved</th>
+        <th>Approved</th>
+      </tr>
+    </table>
+  </div>
 
 </body>
 

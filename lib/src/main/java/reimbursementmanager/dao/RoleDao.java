@@ -23,8 +23,7 @@ public class RoleDao {
   public void add(Role role) {
     try {
       PreparedStatement pStatement = connection.prepareStatement("insert into user_role(role_name) values (?)");
-      pStatement.setInt(2, role.getId());
-      pStatement.setString(3, role.getName());
+      pStatement.setString(1, role.getName());
       int rowCount = pStatement.executeUpdate();
 
       if(rowCount > 0)

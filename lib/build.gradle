@@ -21,6 +21,10 @@ tasks.named('test') {
   useJUnitPlatform()
 }
 
+war{
+  archiveName = 'ROOT.war'
+}
+
 // gretty{
 //     httpPort = 8080
 //     contextPath = '/project1'

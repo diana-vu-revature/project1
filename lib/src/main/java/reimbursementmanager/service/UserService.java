@@ -11,6 +11,14 @@ public class UserService {
 
   private UserService() {}
 
+  public static void add(User user) {
+    userDao.add(user);
+  }
+
+  public static void update(User user) {
+    userDao.update(user);
+  }
+
   public static User getById(int id) {
     return userDao.getById(id);
   }

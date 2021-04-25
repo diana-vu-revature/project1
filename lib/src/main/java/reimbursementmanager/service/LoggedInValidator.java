@@ -9,7 +9,7 @@ import java.io.PrintWriter;
 
 import javax.servlet.annotation.WebFilter;
 
-@WebFilter({"/reimbursement"})
+@WebFilter({"/reimbursement", "/user"})
 public class LoggedInValidator implements Filter{
 
   @Override
@@ -19,14 +19,14 @@ public class LoggedInValidator implements Filter{
 
       if(session != null && session.getAttribute("userId") != null) {
         chain.doFilter(request, response);
+      } else {
+        response.setContentType("text/html;charset=UTF-8");
+        PrintWriter out = response.getWriter();
+        out.print("<p id=\"alert\">Not Authorized. Please login!</p>");
+
+        request.getRequestDispatcher("login.html").include(request, response);
       }
     }
-
-    response.setContentType("text/html;charset=UTF-8");
-    PrintWriter out = response.getWriter();
-    out.print("<p id=\"alert\">Not Authorized. Please login!</p>");
-
-    request.getRequestDispatcher("login.html").include(request, response);
   }
   
 }

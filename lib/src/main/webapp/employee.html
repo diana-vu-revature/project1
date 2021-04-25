@@ -12,26 +12,33 @@
     <h1>Welcome to the Employee Homepage</h1>
   </div>
 
-
-
   <a href="logout">Logout</a> </br>
 
-  <a href="update">Update Profile</a>
+  <div id="profileDiv">
+    <button type="button" id="profileButton">View/Update Profile</button>
+  </div>
+  
+  
+  <div id="reimbursementDiv">
+    <button type="button" id="requestButton">Create Reimbursement Request</button>
+  </div>
+
 
   <h1>Reimbursement Statuses</h1>
 
-
-
-  <h1>Submit Reimbursement Request</h1>
-  <form method="post" action="login">
-    <label for="name">Name:</label>
-    <input type="name" name="name" id="name" /> </br></br>
-
-    <label for="request">Amount Requested:</label>
-    <input type="request" name="request" /> </br></br>
-
-    <input type="submit" value="Submit Request">
-  </form>
+  <div id="reimbursements">
+    <table id="reimTable">
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Manager</th>
+        <th>Employee</th>
+        <th>Resolved</th>
+        <th>Approved</th>
+      </tr>
+    </table>
+  </div>
 
 </body>
 
