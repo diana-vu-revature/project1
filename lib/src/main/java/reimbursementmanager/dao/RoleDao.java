@@ -2,11 +2,14 @@ package reimbursementmanager.dao;
 
 import reimbursementmanager.DBConnection;
 import reimbursementmanager.model.Role;
+import reimbursementmanager.model.User;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.apache.log4j.*;
 
@@ -57,4 +60,24 @@ public class RoleDao {
       return role;
   }
 
+  public List<Role> getAll(){
+    List<Role> roleList = new ArrayList<Role>();
+    Role role = null;
+    try{
+      PreparedStatement pStatement = connection.prepareStatement("select * from user_role");
+      ResultSet set = pStatement.executeQuery();
+      
+      while(set.next() != false) {
+        role = new Role(
+          set.getInt("id"),
+          set.getString("role_name")
+        );
+        roleList.add(role);
+        log.debug("Got roles: " + role);
+      }
+    } catch (SQLException e){
+      e.printStackTrace();
+    }
+    return roleList;
+  }
 }

@@ -2,6 +2,8 @@ package reimbursementmanager.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
+import java.util.stream.Collectors;
 
 import org.apache.log4j.*;
 
@@ -19,7 +21,7 @@ import javax.servlet.annotation.WebServlet;
 
 import com.google.gson.Gson;
 
-@WebServlet({"/user"})
+@WebServlet({"/user", "/employees", "/managers"})
 public class UserController extends HttpServlet{
   private static final Logger log = LogManager.getLogger(ReimbursementController.class);
   private Gson gson = new Gson();
@@ -27,18 +29,51 @@ public class UserController extends HttpServlet{
   @Override
   protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException{
     
-    //getId parameter return as Json
-    HttpSession session = req.getSession(false);
-    int userId = (int) session.getAttribute("userId");
-    User user = UserService.getById(userId);
+    String uri = req.getRequestURI();
 
-    String userString = gson.toJson(user);
+    if(uri.equalsIgnoreCase("/employees")) {
+      List<Role> roles = RoleService.getAll();
+      Role employee = roles.stream().filter(r -> r.getName().equalsIgnoreCase("employee"))
+        .findFirst()
+        .orElse(null);
+      int roleId = employee.getId();
+      List<User> employees = UserService.getByRoleId(roleId);
+      String employeesString = gson.toJson(employees);
 
-    PrintWriter out = resp.getWriter();
-    resp.setContentType("application/json");
-    resp.setCharacterEncoding("UTF-8");
-    out.print(userString);
-    out.flush();
+      PrintWriter out = resp.getWriter();
+      resp.setContentType("application/json");
+      resp.setCharacterEncoding("UTF-8");
+      out.print(employeesString);
+      out.flush();
+    } else if(uri.equalsIgnoreCase("/managers")) {
+      List<Role> roles = RoleService.getAll();
+      Role manager = roles.stream().filter(r -> r.getName().equalsIgnoreCase("manager"))
+      .findFirst()
+      .orElse(null);
+      int roleId = manager.getId();
+      List<User> managers = UserService.getByRoleId(roleId);
+      String managersString = gson.toJson(managers);
+
+      PrintWriter out = resp.getWriter();
+      resp.setContentType("application/json");
+      resp.setCharacterEncoding("UTF-8");
+      out.print(managersString);
+      out.flush();
+    } else {
+      //getId parameter return as Json
+      HttpSession session = req.getSession(false);
+      int userId = (int) session.getAttribute("userId");
+      User user = UserService.getById(userId);
+
+      String userString = gson.toJson(user);
+
+      PrintWriter out = resp.getWriter();
+      resp.setContentType("application/json");
+      resp.setCharacterEncoding("UTF-8");
+      out.print(userString);
+      out.flush();
+    }
+
   }
 
   protected void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException{

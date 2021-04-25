@@ -9,7 +9,7 @@ import java.io.PrintWriter;
 
 import javax.servlet.annotation.WebFilter;
 
-@WebFilter({"/reimbursement", "/user"})
+@WebFilter({"/reimbursement", "/user", "/managers"})
 public class LoggedInValidator implements Filter{
 
   @Override

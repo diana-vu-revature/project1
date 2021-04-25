@@ -35,7 +35,7 @@ docker exec -it db psql -U hiworld
     - [] Mockito
 
 ### Architecture
-- [] Anemic/DDD OR n-tier package & class structure
+- [x] Anemic/DDD OR n-tier package & class structure
 - [] Design Patterns:
   - [] Dependency Injection
   - [x] Data Access Object
@@ -74,9 +74,8 @@ docker exec -it db psql -U hiworld
     - [] can approve/deny pending reimbursement requests
     - [x] can view all pending requests from all employees
     - [] can view images of the receipts from reimbursement requests
-    - [x] can view all resolved requests from all employees
+    - [x] can view all requests from all employees
         - []see which manager resolved it
-    - [] can view all Employees
-    - [] can view reimbursement requests from a single Employee 
+    - [x] can view all Employees
     - [x] can view their information
     - [x] can update their information
