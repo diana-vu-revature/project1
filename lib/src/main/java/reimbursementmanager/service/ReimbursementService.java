@@ -26,7 +26,11 @@ public class ReimbursementService {
     return reimDao.getAll();
   }
 
-  public static Reimbursement add(Reimbursement r){
-    return reimDao.add(r);
+  public static void add(Reimbursement r) {
+    reimDao.add(r);
+  }
+
+  public static void update(Reimbursement r) {
+    reimDao.update(r);
   }
 }

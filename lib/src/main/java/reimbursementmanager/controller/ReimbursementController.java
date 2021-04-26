@@ -31,6 +31,7 @@ public class ReimbursementController extends HttpServlet {
 
   @Override
   protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException{
+    log.debug("request to " + req.getRequestURL());
 
     // Get current user
     HttpSession session = req.getSession(false);
@@ -39,7 +40,7 @@ public class ReimbursementController extends HttpServlet {
     log.debug(user);
     
     String uri = req.getRequestURI();
-
+    
     if(uri.equalsIgnoreCase("/reimbursement/all")) {
       // get all reimbursements to turn to JSON to send in response
       List<Reimbursement> reim = ReimbursementService.getAll();
@@ -53,7 +54,28 @@ public class ReimbursementController extends HttpServlet {
       resp.setCharacterEncoding("UTF-8");
       out.print(reimbursementJsonString);
       out.flush();
-    } else {
+    } else if(req.getParameter("approve") != null || req.getParameter("deny") != null) {
+      String approveReimId = req.getParameter("approve");
+      String denyReimId = req.getParameter("deny");
+
+      if(approveReimId != null) {
+        int reimId = Integer.parseInt(approveReimId);
+        Reimbursement reimToUpdate = ReimbursementService.getById(reimId);
+        reimToUpdate.setManagerId(user.getId());
+        reimToUpdate.setResolved(true);
+        reimToUpdate.setApprove(true);
+        ReimbursementService.update(reimToUpdate);
+        log.debug(user.getFname() + " " + user.getSurname() + " approved reimbursement #" + reimId);
+      } else if(denyReimId != null) {
+        int reimId = Integer.parseInt(denyReimId);
+        Reimbursement reimToUpdate = ReimbursementService.getById(reimId);
+        reimToUpdate.setManagerId(user.getId());
+        reimToUpdate.setResolved(true);
+        reimToUpdate.setApprove(false);
+        ReimbursementService.update(reimToUpdate);
+        log.debug(user.getFname() + " " + user.getSurname() + " denied reimbursement #" + reimId);
+      }
+    } else if(uri.equalsIgnoreCase("/reimbursement")) {
       // get reimbursements for current user to turn to JSON to send in response
       Role userRole = RoleService.getById(user.getRoleId());
       List<Reimbursement> reim = null;

@@ -10,7 +10,7 @@
 
 <body>
   <div id="welcome">
-    <h2>Welcome to the Manager Homepage</h2>
+    <h1 class="display-1">Welcome to the Manager Homepage</h1>
   </div>
 
   <a href="logout" class="btn btn-secondary">Logout</a>
@@ -24,33 +24,39 @@
   </div>
 
   <div id="pendingDiv">
-    <h3>Pending Reimbursement Requests</h3>
-    <table id="pendingReimTable" class="table table-hover">
-      <tr>
-        <th scope="col">Id</th>
-        <th scope="col">Name</th>
-        <th scope="col">Price</th>
-        <th scope="col">Employee</th>
-        <th scope="col">Approve</th>
-        <th scope="col">Deny</th>
-      </tr>
+    <h4>Pending Reimbursement Requests</h4>
+    <table id="pendingReimTable" class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Name</th>
+          <th scope="col">Price</th>
+          <th scope="col">Employee</th>
+          <th scope="col">Approve</th>
+          <th scope="col">Deny</th>
+        </tr>
+      </thead>
     </table>
   </div>
 
   <div id="reimbursementDiv">
-    <h2>Reimbursement Statuses</h2>
-    <p>Review, deny, approve, check status of reimbursement requests from employees.</p>
+    <h4>
+      Reimbursement Statuses
+      <small class="text-muted">Review, deny, approve, check status of reimbursement requests from employees.</small>
+    </h4>
 
-    <table id="reimTable">
-      <tr>
-        <th>Id</th>
-        <th>Name</th>
-        <th>Price</th>
-        <th>Manager</th>
-        <th>Employee</th>
-        <th>Resolved</th>
-        <th>Approved</th>
-      </tr>
+    <table id="reimTable" class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Name</th>
+          <th scope="col">Price</th>
+          <th scope="col">Manager</th>
+          <th scope="col">Employee</th>
+          <th scope="col">Resolved</th>
+          <th scope="col">Approved</th>
+        </tr>
+      </thead>
     </table>
   </div>
 

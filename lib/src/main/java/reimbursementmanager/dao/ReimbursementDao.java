@@ -18,7 +18,7 @@ public class ReimbursementDao {
   }
 
   //create
-  public Reimbursement add(Reimbursement reimbursement) {
+  public void add(Reimbursement reimbursement) {
     try {
       PreparedStatement pStatement = connection.prepareStatement("insert into reimbursement(reim_name, employee_id, manager_id, price, approved, resolved) values (?, ?, ?, ?, ?, ?)");
       pStatement.setString(1, reimbursement.getName());
@@ -36,7 +36,6 @@ public class ReimbursementDao {
       // TODO Auto-generated catch block
       e.printStackTrace();
     }
-    return reimbursement;
   }
   
   //read
@@ -148,5 +147,23 @@ public class ReimbursementDao {
   }
 
   // update
+  public void update(Reimbursement reimbursement) {
+    // UPDATE table_name SET column1 = value1, column2 = value2...., columnN = valueN WHERE id=;
+    try{
+      PreparedStatement pStatement = connection
+        .prepareStatement("UPDATE reimbursement SET reim_name=?, manager_id=?, employee_id=?, price=?, resolved=?, approved=? WHERE id=?");
+      pStatement.setString(1, reimbursement.getName());
+      pStatement.setInt(2, reimbursement.getManagerId());
+      pStatement.setInt(3, reimbursement.getEmployeeId());
+      pStatement.setDouble(4, reimbursement.getPrice());
+      pStatement.setBoolean(5, reimbursement.isResolved());
+      pStatement.setBoolean(6, reimbursement.isApproved());
+      pStatement.setInt(7, reimbursement.getId());
+      pStatement.executeUpdate();
+
+    } catch (SQLException e){
+      e.printStackTrace();
+    }
+  }
 
 }

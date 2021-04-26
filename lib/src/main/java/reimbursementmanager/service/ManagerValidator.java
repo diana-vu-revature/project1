@@ -12,7 +12,7 @@ import java.io.PrintWriter;
 
 import javax.servlet.annotation.WebFilter;
 
-@WebFilter({"/manager", "/manager/*", "/reimbursement/all", "/employees"})
+@WebFilter({"/manager", "/manager/*", "/reimbursement/all", "/employees", "/reimbursement?approve=*", "/reimbursement?deny=*"})
 public class ManagerValidator implements Filter{
 
   @Override

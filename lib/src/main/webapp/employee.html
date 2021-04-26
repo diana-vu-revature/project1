@@ -9,34 +9,39 @@
 
 <body>
   <div id="welcome">
-    <h1>Welcome to the Employee Homepage</h1>
+    <h1 class="display-1">Welcome to the Employee Homepage</h1>
   </div>
 
-  <a href="logout">Logout</a> </br>
+  <a href="logout" class="btn btn-secondary">Logout</a> </br>
 
   <div id="profileDiv">
-    <button type="button" id="profileButton">View/Update Profile</button>
+    <button type="button" id="profileButton" class="btn btn-primary">View/Update Profile</button>
   </div>
   
   
   <div id="reimbursementDiv">
-    <button type="button" id="createReimButton">Create Reimbursement Request</button>
+    <button type="button" id="createReimButton" class="btn btn-primary">Create Reimbursement Request</button>
   </div>
 
 
-  <h1>Reimbursement Statuses</h1>
+  <h4>
+    Reimbursement Statuses
+    <small class="text-muted">Check statuses of your reimbursement requests.</small>
+  </h4>
 
   <div id="reimbursements">
-    <table id="reimTable">
-      <tr>
-        <th>Id</th>
-        <th>Name</th>
-        <th>Price</th>
-        <th>Manager</th>
-        <th>Employee</th>
-        <th>Resolved</th>
-        <th>Approved</th>
-      </tr>
+    <table id="reimTable" class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Id</th>
+          <th scope="col">Name</th>
+          <th scope="col">Price</th>
+          <th scope="col">Manager</th>
+          <th scope="col">Employee</th>
+          <th scope="col">Resolved</th>
+          <th scope="col">Approved</th>
+        </tr>
+      </thead>
     </table>
   </div>
 
