@@ -29,8 +29,15 @@ public class ReimbursementDao {
         pStatement.setNull(3, java.sql.Types.INTEGER);
       }
       pStatement.setDouble(4, reimbursement.getPrice());
-      pStatement.setBoolean(5, reimbursement.isApproved());
+
+      if(reimbursement.isApproved() != null) {
+        pStatement.setBoolean(5, reimbursement.isApproved());
+      } else {
+        pStatement.setNull(5, java.sql.Types.BOOLEAN);
+      }
+
       pStatement.setBoolean(6, reimbursement.isResolved());
+
       pStatement.executeUpdate();
     } catch (SQLException e) {
       // TODO Auto-generated catch block

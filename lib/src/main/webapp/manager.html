@@ -3,6 +3,7 @@
 
 <head>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
   <meta charset="UTF-8">
   <title>Manager Homepage</title>
   <script src="js/manager.js"></script>
@@ -13,14 +14,14 @@
     <h1 class="display-1">Welcome to the Manager Homepage</h1>
   </div>
 
-  <a href="logout" class="btn btn-secondary">Logout</a>
+  <a href="logout" class="btn btn-secondary">Logout</a> </br>
 
   <div id="profileDiv">
-    <button type="button" id="profileButton" class="btn btn-primary">View/Update Profile</button>
+    <button type="button" id="profileButton" class="btn btn-primary">View/Update Profile</button> </br>
   </div>
 
   <div id="employeesDiv">
-    <button type="button" id="employeesButton" class="btn btn-primary">View All Employees</button>
+    <button type="button" id="employeesButton" class="btn btn-primary">View All Employees</button> </br>
   </div>
 
   <div id="pendingDiv">
@@ -41,8 +42,8 @@
 
   <div id="reimbursementDiv">
     <h4>
-      Reimbursement Statuses
-      <small class="text-muted">Review, deny, approve, check status of reimbursement requests from employees.</small>
+      All Reimbursements
+      <small class="text-muted">Review and check status of reimbursement requests from employees.</small>
     </h4>
 
     <table id="reimTable" class="table">
@@ -50,11 +51,11 @@
         <tr>
           <th scope="col">Id</th>
           <th scope="col">Name</th>
-          <th scope="col">Price</th>
+          <th scope="col">Amount</th>
           <th scope="col">Manager</th>
           <th scope="col">Employee</th>
-          <th scope="col">Resolved</th>
-          <th scope="col">Approved</th>
+          <th scope="col">Status</th>
+          <th scope="col">Approved/Denied</th>
         </tr>
       </thead>
     </table>

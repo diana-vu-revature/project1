@@ -116,7 +116,11 @@ public class ReimbursementController extends HttpServlet {
       reimbursementId = Integer.parseInt(id);
     }
 
-    Boolean isApproved = Boolean.parseBoolean(approved);
+    Boolean isApproved = null;
+    if(approved != null) {
+      isApproved = Boolean.parseBoolean(approved);
+    }
+    
     Boolean isResolved = Boolean.parseBoolean(resolved);
     double money = Double.parseDouble(price);
 
