@@ -36,16 +36,16 @@ docker exec -it db psql -U hiworld
 
 ### Architecture
 - [x] Anemic/DDD OR n-tier package & class structure
-- [] Design Patterns:
+- [x] Design Patterns:
   - [] Dependency Injection
   - [x] Data Access Object
   - [] Business Delegate
   - [x] Model-View-Controller
   - [] Front Controller
 - [x] SQL Normalization (3rd form)
-- [] PL/pgSQL
+- [x] PL/pgSQL
 - [] Optional:
-  - [x] Single Page Application
+  - [] Single Page Application
 
 ### Functionality
 - [x] CRUD - Create, Read, Update, Delete
