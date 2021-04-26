@@ -39,6 +39,12 @@ values (
   'Jane', 'Dawn', 'janedawn@vu.net', 'hello'
 );
 
+insert into person (role_id, fname, surname, email, pword) 
+values (
+  (select id from user_role where role_name = 'manager'), 
+  'Diana', 'Vu', 'dianavu@vu.net', 'h3ll0'
+);
+
 insert into reimbursement (reim_name, manager_id, employee_id, price, resolved, approved)
 values (
   'business trip',
