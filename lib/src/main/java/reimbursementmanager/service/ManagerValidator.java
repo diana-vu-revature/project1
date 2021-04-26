@@ -20,17 +20,20 @@ public class ManagerValidator implements Filter{
     if (request instanceof HttpServletRequest) {
       HttpSession session = ((HttpServletRequest) request).getSession(false);
       
+      // checks if user logged in
       if(session != null && session.getAttribute("userId") != null) {
         int userId = (int) session.getAttribute("userId");
         User user = UserService.getById(userId);
         Role role = RoleService.getById(user.getRoleId());
 
+        // checks if user is a manager
         if(role.getName().equalsIgnoreCase("manager")){
           chain.doFilter(request, response);
         } else {
-          // TODO: return 401 response
+          // TODO: return 401 Unauthorized response
         }
       } else {
+        // returns login view
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         out.print("<p id=\"alert\">Not Authorized. Please login!</p>");

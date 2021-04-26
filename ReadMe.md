@@ -32,7 +32,7 @@ docker exec -it db psql -U hiworld
 - Optional:
     - [x] Docker, Docker-Compose
     - [] Jenkins CI automation
-    - [] Mockito
+    - [x] Mockito
 
 ### Architecture
 - [x] Anemic/DDD OR n-tier package & class structure
@@ -71,11 +71,11 @@ docker exec -it db psql -U hiworld
     - [x] can login
     - [x] can view the Manager Homepage
     - [x] can logout
-    - [] can approve/deny pending reimbursement requests
+    - [x] can approve/deny pending reimbursement requests
     - [x] can view all pending requests from all employees
     - [] can view images of the receipts from reimbursement requests
     - [x] can view all requests from all employees
-        - []see which manager resolved it
+        - [x]see which manager resolved it
     - [x] can view all Employees
     - [x] can view their information
     - [x] can update their information
