@@ -75,7 +75,7 @@ To Stop:
 ```bash
 docker-compose --file docker/compose.yaml down
 ```
-Add winpty to front of command if on Windows
+Add "winpty" to front of command if on Windows
 
 ### To enter DB
 ```bash
